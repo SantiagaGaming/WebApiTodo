@@ -41,13 +41,11 @@ namespace WebApiTodo.Controllers
         [HttpGet]
         public IEnumerable<PostModel> GetAll()
         {
-            Console.WriteLine("In get All");
             return _postService.Get();
         }
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            Console.WriteLine("in delete model");
             _postService.Delete(id);
             return Ok();
         }
